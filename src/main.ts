@@ -1,16 +1,15 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
+import { ExpressAdapter } from '@nestjs/platform-express';
+import * as express from 'express';
+
+const server = express();
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-
-  app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
-
-  const port: number = Number(process.env.PORT);
-
-  await app.listen(port ?? 3002, () => {
-    console.log(`server is running on port ${port}`);
-  });
+  const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
+  await app.init();
 }
+
 bootstrap();
+
+export default server; // 👈 دي مهمة لـ Vercel
