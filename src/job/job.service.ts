@@ -6,7 +6,6 @@ import { Job, jobDocument } from 'src/schemas/job.schema';
 import { User } from 'src/schemas/user.schema';
 import { CloudinaryService } from 'src/utils/Cloudinary.service';
 import { UpdateJobDto } from './dto/update-job.dto';
-// import { CompanyService } from 'src/company/company.service';
 
 @Injectable()
 export class JobService {
@@ -14,11 +13,9 @@ export class JobService {
     @InjectModel(Job.name) private jobModel: Model<Job>,
     @InjectModel(Application.name) private ApplicationModel: Model<Application>,
     private cloudinaryService: CloudinaryService,
-    // private companyService: CompanyService,
   ) {}
 
   async createJob(body: any, user: User) {
-    // await this.companyService.getCompany(body.company);
     body.addedBy = user._id;
     const job = await this.jobModel.create(body);
     return {
