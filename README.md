@@ -25,6 +25,12 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+Developed a tailored job search platform with RESTful APIs for jobs, companies, and applications.
+
+Managed MongoDB via Mongoose for optimized data handling; integrated email notifications with Nodemailer.
+
+Implemented authentication & authorization using JWT, bcrypt; applied NestJS features (Guards, Pipes, Interceptors, Decorators) for secure, validated requests.
+
 ## Project setup
 
 ```bash
