@@ -31,6 +31,8 @@ Managed MongoDB via Mongoose for optimized data handling; integrated email notif
 
 Implemented authentication & authorization using JWT, bcrypt; applied NestJS features (Guards, Pipes, Interceptors, Decorators) for secure, validated requests.
 
+Postman API Documentation: [https://documenter.getpostman.com/view/36675462/2sB2j68ppB](https://documenter.getpostman.com/view/36675462/2sB2j68ppB)
+
 App Link: [job-search-app-wine.vercel.app](https://job-search-app-wine.vercel.app/auth)
 
 ## Project setup
